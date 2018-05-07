@@ -4,5 +4,5 @@ include:
   - {{ slspath }}/keyboard
   - {{ slspath }}/boot
   - {{ slspath }}/raspicast
-  - {{ slspath }}/raspicast
-#  - {{ slspath }}/web-browser
+  - {{ slspath }}/media-center
+  - {{ slspath }}/pi-hole
