@@ -1,0 +1,4 @@
+# Starting from empty file
+log_level: info
+master: localhost
+minion_id_caching: False
