@@ -1,8 +1,7 @@
 # sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
 
-web-browser.package:
-  pkg.installed:
-    - chromium-browser
+chromium-browser:
+  pkg.installed
 
 web-browser.necessary.packages:
   pkg.installed:
@@ -18,11 +17,11 @@ Backup .config/lxsession/LXDE-pi/autostart:
 .config/lxsession/LXDE-pi/autostart:
   file.managed:
     - contents:
-      - @chromium-browser — kiosk — incognito http://google.com
-      - @xset s noblank
-      - @xset s off
-      - @xset -dpms
-      - @unclutter -idle 0.1 -root
+      - "@chromium-browser — kiosk — incognito http://google.com"
+      - "@xset s noblank"
+      - "@xset s off"
+      - "@xset -dpms"
+      - "@unclutter -idle 0.1 -root"
 
 Backup /etc/lightdm/lightdm.conf:
   file.copy:

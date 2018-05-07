@@ -5,4 +5,4 @@ include:
   - {{ slspath }}/boot
   - {{ slspath }}/raspicast
   - {{ slspath }}/raspicast
-  - {{ slspath }}/web-browser
+#  - {{ slspath }}/web-browser
