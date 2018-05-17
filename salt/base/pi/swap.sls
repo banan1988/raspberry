@@ -2,6 +2,7 @@ Backup /etc/dphys-swapfile:
   file.copy:
     - name: /etc/dphys-swapfile.BCK
     - source: /etc/dphys-swapfile
+    - onlyif: 'test ! -e /etc/dphys-swapfile.BCK'
 
 /etc/dphys-swapfile:
   file.managed:

@@ -2,6 +2,7 @@ Backup /etc/apt/sources.list:
   file.copy:
     - name: /etc/apt/sources.list.BCK
     - source: /etc/apt/sources.list
+    - onlyif: 'test ! -e /etc/apt/sources.list.BCK'
 
 /etc/apt/sources.list:
   file.managed:

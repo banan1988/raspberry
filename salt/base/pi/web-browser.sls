@@ -19,6 +19,7 @@ Backup /etc/X11/Xwrapper.config:
   file.copy:
     - name: /etc/X11/Xwrapper.config.BCK
     - source: /etc/X11/Xwrapper.config
+    - onlyif: 'test ! -e /etc/X11/Xwrapper.config.BCK'
 
 /etc/X11/Xwrapper.config:
   file.managed:
