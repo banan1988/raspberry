@@ -11,7 +11,9 @@ web-browser.necessary.packages:
       - unclutter
       - matchbox-window-manager
       - upower
-      - xserver-xorg-legacy
+
+xserver-xorg-legacy:
+  pkg.installed
 
 Backup /etc/X11/Xwrapper.config:
   file.copy:
