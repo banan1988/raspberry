@@ -23,5 +23,5 @@ Backup /etc/apt/sources.list:
 
 apt-get update:
   cmd.run:
-    - watch:
+    - onchanges:
       - file: /etc/apt/sources.list

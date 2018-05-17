@@ -9,3 +9,4 @@ include:
   - {{ slspath }}/media-center
   - {{ slspath }}/pi-hole
   - {{ slspath }}/web-browser
+  - {{ slspath }}/user

@@ -46,6 +46,14 @@ Backup /etc/X11/Xwrapper.config:
     - mode: 755
     - makedirs: True
 
+/opt/chromium-browser/run-chromium-browser.sh:
+  file.managed:
+    - contents: |
+        #!/bin/sh
+        /usr/bin/chromium-browser --user-agent="Mozilla/5.0 (X11; CrOS armv7l 6946.86.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" https://www.netflix.com/browse/my-list
+    - mode: 755
+    - makedirs: True
+
 /usr/bin/chromium:
   file.symlink:
     - target: /opt/chromium-browser/chromium.sh
