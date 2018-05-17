@@ -10,6 +10,9 @@ web-browser.necessary.packages:
       - openbox
       - unclutter
       - matchbox-window-manager
+      - upower
+      - webaccounts-chromium-extension
+      - unity-chromium-extension
 
 /opt/chromium-browser/start-chromium.sh:
   file.managed:

@@ -4,6 +4,7 @@ include:
   - {{ slspath }}/keyboard
   - {{ slspath }}/boot
   - {{ slspath }}/swap
+  - {{ slspath }}/repositories
   - {{ slspath }}/raspicast
   - {{ slspath }}/media-center
   - {{ slspath }}/pi-hole
