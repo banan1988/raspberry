@@ -11,15 +11,27 @@ web-browser.necessary.packages:
       - unclutter
       - matchbox-window-manager
       - upower
-      - webaccounts-chromium-extension
-      - unity-chromium-extension
+      - xserver-xorg-legacy
+
+Backup /etc/X11/Xwrapper.config:
+  file.copy:
+    - name: /etc/X11/Xwrapper.config.BCK
+    - source: /etc/X11/Xwrapper.config
+
+/etc/X11/Xwrapper.config:
+  file.managed:
+    - contents:
+      - allowed_users=anybody
+      - needs_root_rights=yes
+    - require:
+      - pkg: xserver-xorg-legacy
 
 /opt/chromium-browser/start-chromium.sh:
   file.managed:
     - contents: |
         #!/bin/sh
         matchbox-window-manager -use_cursor no&
-        chromium-browser https://www.netflix.com/browse/my-list
+        chromium-browser --user-agent="Mozilla/5.0 (X11; CrOS armv7l 6946.86.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" https://www.netflix.com/browse/my-list
     - mode: 755
     - makedirs: True
 
