@@ -1,6 +1,7 @@
 banan:
   user.present:
     - home: /home/banan
+    - shell: /bin/bash
     - groups:
       - pi
       - adm
