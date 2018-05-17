@@ -9,3 +9,5 @@ Backup /boot/config.txt:
     - contents:
       - disable_overscan=1
       - gpu_mem=256
+      - # force HDMI mode for audio
+      - hdmi_drive=2
