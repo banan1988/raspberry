@@ -16,5 +16,5 @@ dphys-swapfile:
   service.running:
     - enable: True
     - reload: True
-    - watch:
+    - onchanges:
       - file: /etc/dphys-swapfile

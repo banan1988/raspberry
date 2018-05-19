@@ -7,7 +7,9 @@ Backup /boot/config.txt:
 /boot/config.txt:
   file.managed:
     - contents:
+      - "# For more options and information see http://rpf.io/configtxt"
+      - "# uncomment this if your display has a black border of unused pixels visible and your display can output without overscan"
       - disable_overscan=1
+      - "# Enable audio (loads snd_bcm2835)"
+      - dtparam=audio=on
       - gpu_mem=256
-      - "# force HDMI mode for audio"
-      - hdmi_drive=2

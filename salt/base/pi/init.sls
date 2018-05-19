@@ -4,9 +4,8 @@ include:
   - {{ slspath }}/keyboard
   - {{ slspath }}/boot
   - {{ slspath }}/swap
-  - {{ slspath }}/repositories
+  - {{ slspath }}/alias
   - {{ slspath }}/raspicast
   - {{ slspath }}/media-center
   - {{ slspath }}/pi-hole
   - {{ slspath }}/web-browser
-  - {{ slspath }}/user
