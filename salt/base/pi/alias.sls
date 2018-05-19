@@ -1,4 +1,4 @@
-~/.bash_aliases:
+/home/pi/.bash_aliases:
   file.managed:
     - contents:
       - "alias ll='ls -la'"

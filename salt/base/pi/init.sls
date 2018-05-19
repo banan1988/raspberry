@@ -5,6 +5,7 @@ include:
   - {{ slspath }}/boot
   - {{ slspath }}/swap
   - {{ slspath }}/alias
+  - {{ slspath }}/packages
   - {{ slspath }}/raspicast
   - {{ slspath }}/media-center
   - {{ slspath }}/pi-hole
