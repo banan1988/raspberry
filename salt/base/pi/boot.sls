@@ -12,4 +12,8 @@ Backup /boot/config.txt:
       - disable_overscan=1
       - "# Enable audio (loads snd_bcm2835)"
       - dtparam=audio=on
+      - "# Set memory for GPU"
       - gpu_mem=256
+      - "# HDMI 720p 60Hz"
+      - hdmi_group=1
+      - hdmi_mode=4
