@@ -24,15 +24,8 @@ kodi17-repo phantom-cda:
 kodi17-repo alltube:
   file.managed:
     - name: /tmp/kodi17-repo-alltube.zip
-    - source: https://github.com/podpis/kodi/raw/master/zips/repository.podpis-1.4.1.zip
-    - source_hash: a43e569136535fb3892b83f5f29c5e94
+    - source: https://github.com/podpis/kodi/blob/master/zips/repository.podpis/repository.podpis-1.4.2.zip
+    - source_hash: f7007b30fa92c4e5bf7ffd1daa03b1d6
     - require:
       - pkg: kodi17
     - onlyif: 'test ! -e /tmp/kodi17-repo-alltube.zip'
-
-kodi18-repo netflix:
-  file.managed:
-    - name: /tmp/kodi18-repo-netflix.zip
-    - source: https://github.com/asciidisco/plugin.video.netflix/archive/master.zip
-    - source_hash: 76a985ac1ca9165877f2490ba4d25163
-    - onlyif: 'test ! -e /tmp/kodi18-repo-netflix.zip'
