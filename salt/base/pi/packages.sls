@@ -1,4 +1,5 @@
 common packages:
   pkg.installed:
-    - vim
-    - htop
+    - pkgs:
+      - vim
+      - htop
